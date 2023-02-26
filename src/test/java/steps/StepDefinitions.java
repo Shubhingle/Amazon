@@ -136,7 +136,36 @@ public class StepDefinitions {
         public void theProductGetsDisplayed(String result) {
         String text = homePage.getProductResult().getText();
 
+        }
 
-    }
+        //category
+        @Given("the user navigated to amazon homepage")
+        public void theUserNavigatedToAmazonHomepage() {
+            url = QaProps.getValue("url");
+            driver.get(url);
+        }
+
+        @When("user clicks on dropdown and selects a category")
+        public void userClicksOnDropdownAndSelectsACategory() {
+            homePage = new HomePage(driver);
+            homePage.getCategory().click();
+            homePage.getSearchCategory().click();
+       }
+
+        @And("the user enters name of product")
+        public void theUserEntersNameOfProduct() {
+            homePage = new HomePage(driver);
+            homePage.getSearchBar().sendKeys(data.get("Saree"));
+            homePage.getSearchBox().sendKeys(Keys.ENTER);
+       }
+
+        @Then("the product gets displayed for category")
+        public void theProductGetsDisplayedForCategory() {
+            String text = homePage.getCategoryResult().getText();
+            System.out.println(text);
+            Assert.assertEquals(text, data.get("Saree"));
+
+        }
+
 }
 

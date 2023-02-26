@@ -77,6 +77,33 @@ public class HomePage {
     @FindBy(xpath = "//span[@class='a-color-state a-text-bold']")
     WebElement ProductResult;
 
+    public WebElement getCategory() {
+        return Category;
+    }
+    @FindBy(xpath = "//div[@class='nav-search-scope nav-sprite']")
+    WebElement Category;
+
+    public WebElement getSearchCategory() {
+        return searchCategory;
+    }
+
+    @FindBy(xpath = "//option[@value='search-alias=fashion']")
+    WebElement searchCategory;
+
+    public WebElement getSearchBar() {
+        return searchBar;
+    }
+
+    @FindBy(id = "twotabsearchtextbox")
+    WebElement searchBar;
+
+    public WebElement getCategoryResult() {
+        return categoryResult;
+    }
+
+    @FindBy(xpath = "//span[@class='a-color-state a-text-bold']")
+    WebElement categoryResult;
+
 }
 
 
