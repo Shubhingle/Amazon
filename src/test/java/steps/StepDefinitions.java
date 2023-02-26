@@ -155,15 +155,18 @@ public class StepDefinitions {
         @And("the user enters name of product")
         public void theUserEntersNameOfProduct() {
             homePage = new HomePage(driver);
-            homePage.getSearchBar().sendKeys(data.get("Saree"));
-            homePage.getSearchBox().sendKeys(Keys.ENTER);
+            homePage.getSearchBar().sendKeys("Saree");
+            homePage.getSearchIcon().click();
        }
 
         @Then("the product gets displayed for category")
-        public void theProductGetsDisplayedForCategory() {
+        public void theProductGetsDisplayedForCategory() throws InterruptedException{
             String text = homePage.getCategoryResult().getText();
             System.out.println(text);
-            Assert.assertEquals(text, data.get("Saree"));
+            Assert.assertEquals(text,"\"Saree\"");
+
+
+
 
         }
 
