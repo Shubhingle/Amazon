@@ -38,7 +38,7 @@ public class HomePage {
         return invalidResult;
     }
 
-    @FindBy(xpath = "span[@class='a-color-state a-text-bold']")
+    @FindBy(xpath = "//span[@class='a-color-state a-text-bold']")
     WebElement invalidResult;
 
     public WebElement getDealTab() {

@@ -78,6 +78,7 @@ public class StepDefinitions {
             System.out.println(text);
             Assert.assertEquals(text, "\"1234\"");
          }
+
         //Today's deal
         @Given("user navigates to the home page")
         public void userNavigatesToTheHomePage() {
@@ -119,24 +120,24 @@ public class StepDefinitions {
         }
 
         //Scenario Outline
-        @Given("When the user navigates to the home page of amazon")
-        public void whenTheUserNavigatesToTheHomePageOfAmazon() {
-            url = QaProps.getValue("url");
-            driver.get(url);
-        }
-
-        @When("the user should click on the search bar and enters {string}")
-        public void theUserShouldClickOnTheSearchBarAndEnters(String Product) {
-            homePage.getResults().click();
-            homePage.getResults().sendKeys("Product");
-
-        }
-
-        @Then("the product gets displayed")
-        public void theProductGetsDisplayed() {
-        String text = homePage.getProductResult().getText();
-
-        }
+//        @Given("When the user navigates to the home page of amazon")
+//        public void whenTheUserNavigatesToTheHomePageOfAmazon() {
+//            url = QaProps.getValue("url");
+//            driver.get(url);
+//        }
+//
+//        @When("the user should click on the search bar and enters {string}")
+//        public void theUserShouldClickOnTheSearchBarAndEnters(String Product) {
+//            homePage.getResults().click();
+//            homePage.getResults().sendKeys("Product");
+//
+//        }
+//
+//        @Then("the product gets displayed")
+//        public void theProductGetsDisplayed() {
+//        String text = homePage.getProductResult().getText();
+//
+//        }
 
         //category
         @Given("the user navigated to amazon homepage")

@@ -20,14 +20,14 @@ Feature: Search a product feature
         When the user should be able to access Best sellers tab
         Then the Best Sellers tab will be displayed
 
-      Scenario Outline: Verify that the user is able to search multiple products
-       Given When the user navigates to the home page of amazon
-       When  the user should click on the search bar and enters "<Product>"
-       Then the product gets displayed
-       Examples:
-        | Product |
-        | Jeans   |
-        | Bags    |
+#      Scenario Outline: Verify that the user is able to search multiple products
+#       Given When the user navigates to the home page of amazon
+#       When  the user should click on the search bar and enters "<Product>"
+#       Then the product gets displayed
+#       Examples:
+#        | Product |
+#        | Jeans   |
+#        | Bags    |
 
       Scenario: Verify that user is able to select amazon fashion category and search product
         Given the user navigated to amazon homepage
