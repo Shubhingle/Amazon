@@ -133,7 +133,7 @@ public class StepDefinitions {
         }
 
         @Then("the product gets displayed")
-        public void theProductGetsDisplayed(String result) {
+        public void theProductGetsDisplayed() {
         String text = homePage.getProductResult().getText();
 
         }
