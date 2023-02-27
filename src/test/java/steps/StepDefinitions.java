@@ -71,13 +71,13 @@ public class StepDefinitions {
             homePage.getInvalidText().sendKeys("1234");
             homePage.getInvalidText().sendKeys(Keys.ENTER);
         }
-        @Then("the user should get error message")
-        public void the_user_should_get_error_message () {
+
+        @Then("the user should get random result")
+        public void theUserShouldGetRandomResult() {
             String text = homePage.getInvalidResult().getText();
             System.out.println(text);
             Assert.assertEquals(text, "\"1234\"");
-        }
-
+         }
         //Today's deal
         @Given("user navigates to the home page")
         public void userNavigatesToTheHomePage() {
@@ -164,11 +164,6 @@ public class StepDefinitions {
             String text = homePage.getCategoryResult().getText();
             System.out.println(text);
             Assert.assertEquals(text,"\"Saree\"");
-
-
-
-
         }
-
 }
 
