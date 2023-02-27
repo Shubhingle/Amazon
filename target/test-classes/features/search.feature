@@ -5,10 +5,10 @@ Feature: Search a product feature
     When the user enters the product name
     Then the product results should be displayed
 
-    Scenario: Verify that user gets error message, when invalid data is entered
+    Scenario: Verify that user gets any any product suggestions if invalid data is entered
       Given the user navigates to the home page
       When the user enters invalid name
-      Then the user should get error message
+      Then the user should get random result
 
     Scenario: Verify that user is able to access Today's Deal Tab
       Given user navigates to the home page
