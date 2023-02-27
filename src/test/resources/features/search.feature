@@ -28,7 +28,7 @@ Feature: Search a product feature
 #        | Product |
 #        | Jeans   |
 #        | Bags    |
-
+      @smoke
       Scenario: Verify that user is able to select amazon fashion category and search product
         Given the user navigated to amazon homepage
         When user clicks on dropdown and selects a category
